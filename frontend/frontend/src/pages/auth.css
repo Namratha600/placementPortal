@@ -1,0 +1,132 @@
+/* ============================================================
+   Shared auth page styles (login, register, OTP, forgot-password).
+   Import this in each auth page for a consistent entry experience.
+   ============================================================ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(59,130,246,0.10), transparent 60%),
+    var(--bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-5);
+}
+.auth-logo {
+  width: 34px; height: 34px; flex-shrink: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--on-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; letter-spacing: -0.02em;
+}
+.auth-brand-name { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+.auth-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: 4px;
+}
+.auth-title { font-size: 22px; margin: 0; }
+.auth-sub { margin: 0 0 var(--space-5); color: var(--text-muted); font-size: 14px; }
+
+.auth-form { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.auth-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.auth-field > span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.auth-field input {
+  width: 100%;
+  padding: 11px 13px;
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.auth-field input::placeholder { color: var(--text-subtle); }
+.auth-field input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: var(--space-1);
+  transition: background 0.15s ease;
+}
+.auth-btn:hover:not(:disabled) { background: var(--accent-hover); }
+.auth-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.auth-error {
+  background: var(--danger-soft);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #fca5a5;
+  font-size: 13.5px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+}
+
+.auth-success {
+  background: var(--success-soft);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: #6ee7a0;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: var(--radius);
+  line-height: 1.5;
+}
+
+.auth-footer {
+  margin: var(--space-5) 0 0;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.auth-footer a { font-weight: 500; }
+
+/* Admin login badge — recognizable admin surface without changing the palette */
+.auth-admin-badge {
+  background: var(--warning-soft);
+  color: #fcd34d;
+  border-color: rgba(245,158,11,0.35);
+  gap: 5px;
+}

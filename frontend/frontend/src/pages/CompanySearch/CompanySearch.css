@@ -1,0 +1,47 @@
+.cs-wrap { max-width: 640px; margin: 0 auto; }
+.cs-heading { font-size: 22px; margin: 0 0 4px; }
+.cs-sub { margin: 0 0 var(--space-5); font-size: 14px; }
+
+.cs-search { position: relative; }
+.cs-search-icon {
+  position: absolute;
+  left: 14px; top: 50%; transform: translateY(-50%);
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+.cs-input {
+  width: 100%;
+  padding: 13px 14px 13px 42px;
+  font-size: 15px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.cs-input::placeholder { color: var(--text-subtle); }
+.cs-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+.cs-dropdown {
+  position: absolute;
+  top: calc(100% + 6px); left: 0; right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  z-index: 20;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px;
+}
+.cs-drop-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text);
+}
+.cs-drop-item:hover { background: var(--surface-2); }
+.cs-drop-muted { padding: 12px; color: var(--text-subtle); font-size: 14px; }

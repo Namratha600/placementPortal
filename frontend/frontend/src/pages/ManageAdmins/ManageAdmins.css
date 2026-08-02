@@ -1,0 +1,23 @@
+.ma-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+.ma-sub { margin: 0; font-size: 14px; }
+
+.ma-form { max-width: 440px; margin-bottom: var(--space-5); padding: var(--space-5); }
+.ma-field { margin-bottom: var(--space-4); }
+
+.ma-table-wrap { padding: 0; overflow: hidden; }
+
+.ma-empty {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--text-subtle);
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
